@@ -1,0 +1,119 @@
+/* Estilos base */
+.video-container {
+  position: relative;
+  width: 100%;
+  /* Adicione altura se necessário, por exemplo: */
+  /* height: 56.25vw; altura para proporção de aspecto de 16:9 */
+  /* outros estilos... */
+}
+
+.video-player {
+  width: 100%;
+  height: auto; /* Mantenha auto para garantir que a proporção seja preservada */
+  /* outros estilos... */
+}
+
+.line {
+  position: absolute;
+  background-color: transparent;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: white; /* Assegure visibilidade */
+}
+
+.vertical-line {
+  position: absolute;
+  left: 50%; /* Centraliza a linha verticalmente */
+  top: 10%; /* Começa a 10% do topo do container */
+  bottom: 45%; /* Termina no meio do container */
+  width: 1px; /* A largura da linha pode ser mantida como 1px */
+  background-color: transparent; /* A cor de fundo deve ser transparente para as bordas tracejadas */
+  border-left: 1px dashed white; /* Define a borda esquerda como tracejada */
+  
+}
+
+.horizontal-line {
+  top: 55%;
+  left: 50%;
+  width: 25%;
+  height: 1px; /* Ajuste a espessura da linha horizontal */
+  border-top: none;
+  color: white;
+}
+
+.scissors {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px; /* Ajuste o tamanho conforme necessário */
+  cursor: pointer;
+  z-index: 10;
+  /* A duração da animação é dividida em duas fases pela propriedade 'animation' abaixo */
+}
+@keyframes scissorsAnimation {
+  0%, 50% { 
+    top: 0; /* Começa no topo do container */
+    left: 50%; /* Inicia no centro (meio da linha vertical) */
+  }
+  50%, 100% { 
+    top: 50%; /* Desce até o meio do container */
+    left: 50%; /* Mantém na mesma posição horizontal até a metade da animação */
+  }
+  100% {
+    top: 50%; /* Mantém na posição vertical do meio do container */
+    left: 90%; /* Move para a direita até 90% do container */
+  }
+}
+
+.scissors.cutting {
+  animation: scissorsAnimation 6s linear forwards;
+}
+
+.message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  color: white; /*Texto branco para contraste*/
+  background-color: rgba(0, 0, 0, 0.7); /*Fundo semi-transparente para legibilidade*/
+  border-radius: 5px;
+  z-index: 10;
+}
+/* Estilos para telas pequenas (dispositivos móveis) */
+@media (max-width: 600px) {
+  .video-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .video-player {
+    /* Ajustes para o vídeo responsivo em dispositivos móveis */
+    height: auto; /* Para manter a proporção */
+  }
+
+  .touch-prompt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza exatamente no meio do container */
+  font-size: 1em; /* Tamanho do texto */
+  color: white; /* Cor do texto branco */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com opacidade de 50% */
+  padding: 10px 20px; /* Espaçamento interno para tornar o toque mais fácil */
+  border-radius: 5px; /* Bordas arredondadas */
+  text-align: center; /* Assegura que o texto esteja centralizado dentro do elemento */
+  z-index: 20; /* Assegura que a mensagem fique acima dos outros elementos */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  /* Outros estilos, como sombra, podem ser adicionados aqui se necessário */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Exemplo de sombra para um efeito "levitado" */
+  width: 80%; /* Define uma largura máxima, ajuste conforme necessário */
+  max-width: 300px; /* Limita a largura máxima para evitar que seja muito grande em telas maiores */
+  }
+
+  .scissors {
+    /* Ajustes para a imagem da tesoura em dispositivos móveis */
+    width: 20px; /* ou outro tamanho conforme necessário */
+  }
+
+  /* Adicione aqui outros ajustes para elementos específicos conforme necessário */
+}
