@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import VideoSwitcher from './components/VideoSwitcher/VideoSwitcher';
-import bio from './assets/images/bio.jpeg'; // Importe a imagem
+import bio from './assets/images/iniciar.jpg'; // Importe a imagem
 
 function App() {
   const [isVideoStarted, setIsVideoStarted] = useState(false);
