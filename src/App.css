@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color:  #24272e;
   min-height: 15vh; /* Reduz a altura mínima do cabeçalho */
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@
   font-style: italic;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  margin-bottom: 0; /* Remove a margem inferior, se houver */
 }
 
 /* Adiciona estilo para o vídeo */
@@ -25,4 +26,28 @@
 video {
   width: 100%; /* Faz o vídeo expandir para preencher o container */
   height: auto; /* Mantém a proporção do vídeo */
+}
+body {
+  background-color: #282c34; /* Cor de fundo preto azulado */
+  color: #ffffff; /* Cor do texto branco para contraste */
+  /* Adicione aqui outros estilos globais, se necessário */
+}
+.start-image {
+  /* Estilize e posicione sua imagem conforme necessário */
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Para garantir que a imagem não exceda a largura da tela */
+}
+
+.start-button {
+  display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

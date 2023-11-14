@@ -93,20 +93,20 @@
 
   .touch-prompt {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centraliza exatamente no meio do container */
-  font-size: 1em; /* Tamanho do texto */
+  top: 40%;
+  left: 40%;
+  transform: translate(-30%, -30%); /* Centraliza exatamente no meio do container */
+  font-size: 0.4cm; /* Tamanho do texto */
   color: white; /* Cor do texto branco */
   background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com opacidade de 50% */
-  padding: 10px 20px; /* Espaçamento interno para tornar o toque mais fácil */
+  padding: 5px 5px; /* Espaçamento interno para tornar o toque mais fácil */
   border-radius: 5px; /* Bordas arredondadas */
   text-align: center; /* Assegura que o texto esteja centralizado dentro do elemento */
   z-index: 20; /* Assegura que a mensagem fique acima dos outros elementos */
   cursor: pointer; /* Muda o cursor para indicar que é clicável */
   /* Outros estilos, como sombra, podem ser adicionados aqui se necessário */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Exemplo de sombra para um efeito "levitado" */
-  width: 80%; /* Define uma largura máxima, ajuste conforme necessário */
+  width: 20%; /* Define uma largura máxima, ajuste conforme necessário */
   max-width: 300px; /* Limita a largura máxima para evitar que seja muito grande em telas maiores */
   }
 
@@ -116,4 +116,56 @@
   }
 
   /* Adicione aqui outros ajustes para elementos específicos conforme necessário */
+}
+/*incremento de código para device fisico*/
+.loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.video-player.hidden {
+  display: none;
+}
+.start-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* Para centralizar verticalmente, ajuste conforme necessário */
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.start-button:hover {
+  background-color: darkgreen;
+}
+
+.start-container {
+  text-align: center;
+    padding-top: 10px; /* Ajuste o espaço no topo, se necessário */
+    margin-top: 0; /* Reduz ou remove a margem superior */
+}
+
+.bio-image {
+  top: 40%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  max-width: 100%;
+  margin-bottom: 20px; /* Espaço entre a imagem e o botão */
 }
